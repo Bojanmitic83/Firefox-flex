@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400,600,700,900&display=swap');
+
+:root {
+    --fontFamily:'Inter', sans-serif;
+    --fontColor: #20123a;
+    --plava: #0060df;
+    --buttonHover: #0250bb;
+    --tamnoPlava: #08204e;
+    --bela: #fff;
+    --transition: .4s ease;
+    --fontSize: 16px;
+}
+
+/********************
+BASIC STYLES
+********************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    color: var(--fontColor);
+    margin-top: 30px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+/********************
+nav
+********************/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    margin-right: 30px;
+}
+nav ul li a {
+    color: var(--fontColor);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+nav .logo {
+    margin-right: 30px;
+    font-size: 1.2rem;
+    color: var(--fontColor);
+    font-weight: 600;
+    position: relative;
+}
+.logo::before {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(img/logo.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: 5px;
+    right: 70px;
+}
+nav .logo:hover {
+    text-decoration: underline;
+}
+nav button {
+    padding: 7px 30px;
+    background: transparent;
+    border: 2px solid var(--plava);
+    font-size: 1.2rem;
+    color: var(--plava);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+nav button:hover {
+    color: var(--buttonHover);
+    border: 2px solid var(--buttonHover);
+    cursor: pointer;
+}
+/********************
+header
+********************/
+header {
+    height: 120vh;
+    background-image: url(img/header-bottom.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    text-align: center;
+
+}
+header .hgroup {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+header .image {
+    height: 40vh;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+
+}
+header .image img {
+    width: 60%;
+}
+header h1 {
+    font-size: 3rem;
+    padding: 35px 0;
+    font-weight: 700;
+}
+header h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px 0;
+    line-height: 1.6;
+}
+header button {
+    padding: 18px 30px;
+    color: var(--bela);
+    background: var(--plava);
+    font-size: 1.1rem;
+    border: none;
+    margin: 25px 0;
+    transition: var(--transition);
+}
+header button:hover {
+    background: var(--buttonHover);
+    cursor: pointer;
+}
+header h5 {
+    font-weight: 400;
+    padding-bottom: 40px;
+}
+header p {
+    font-size: .9rem;
+}
+/********************
+about
+********************/
+.about {
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.about .hgroup {
+    flex: 0 0 50%;
+}
+.about h2 {
+    font-size: 2rem;
+    padding: 20px 0;
+}
+.about p {
+    padding-bottom: 15px;
+    line-height: 1.6;
+}
+.about h5 {
+    font-size: 1rem;
+}
+/********************
+tools
+********************/
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tools article {
+    flex: 0 0 46%;
+    margin-bottom: 50px;
+}
+.tools img {
+    width: 100%;
+}
+.tools article .text {
+    padding: 40px 0;
+}
+.tools .text h2 {
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+.tools .text h5 {
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+.tools .text p {
+    padding-bottom: 20px;
+}
+.tools .text a {
+    text-decoration: underline;
+    color: var(--plava);
+    font-size: .9rem;
+    font-weight: 700;
+}
+/********************
+build
+********************/
+.build {
+    padding: 50px 0;
+}
+.build article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.build article div {
+    flex: 0 0 32%;
+    margin-bottom: 70px;
+}
+.build img {
+    width: 45%;
+}
+.build a{
+    text-decoration: underline;
+    font-weight: 600;
+}
+.build article div:nth-child(10) {
+    position: relative;
+    left: 450px;
+}
+/********************
+footer
+********************/
+footer {
+    background-image: url(img/newsletter.png);
+    height: 30vh;
+
+}
+footer article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 40px 40px 160px;
+    background: var(--bela);
+    border-radius: 5px;
+    position: relative;
+    top: 50px;
+}
+footer h3 {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+footer .text::before {
+    display: block;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url(img/news-icon.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+   
+}
+footer form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+footer form input {
+    padding: 12px 40px 12px 15px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+footer button {
+    padding: 12px 40px 12px 15px;
+    color: var(--bela);
+    background: var(--plava);
+    font-size: 1.1rem;
+    border: none;
+    transition: var(--transition);
+}
+/********************
+responsive
+********************/
+@media(max-width:767px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    header .hgroup img {
+        width: 50%;
+        padding: 50px 0;
+        position: relative;
+        top: 20px;
+    }
+    nav .logo {
+        margin-right: 15px;
+        font-size: 1rem;
+    }
+    nav div {
+        margin-left: 30px;
+    }
+    nav button {
+        margin: 15px auto;
+    }
+    .logo::before {
+        bottom: -9px;
+        right: 56px;
+    }
+    nav ul li a {
+        font-size: .9rem;
+    }
+    nav ul li {
+        margin-right: 12px;
+    }
+    header h1 {
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+    header h4 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    .about {
+        padding: 30px 0;
+    }
+    .about .hgroup {
+        flex: 0 0 100%;
+    }
+    .tools article {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    .build article div {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .build article div:nth-child(10) {
+        position: relative;
+        left: 0px;
+    }
+    footer h3 {
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+    footer .text::before {
+        width: 80px;
+        height: 80px;
+        bottom: 200px;
+        left: 30px;
+       
+    }
+    footer p {
+        font-size: .8rem;
+    }
+    footer input {
+        font-size: .9rem;
+    }
+    footer form input {
+        padding: 6px 3px 6px 8px;
+        font-size: .8rem;
+        margin-bottom: 10px;
+    }
+}
+
